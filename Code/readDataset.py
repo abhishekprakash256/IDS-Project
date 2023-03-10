@@ -6,6 +6,7 @@ to visualize the dataset and understand
 #imports 
 import pandas as pd 
 import numpy as np
+import matplotlib as plt
 
 
 
@@ -30,9 +31,41 @@ class Datahandler:
 		#data informations
 		head = data.head()
 		info = data.info()
+		tail = data.tail()
+		describe = data.describe()
+		unique = data.nunique()
+		issum = data.isna().sum()
+		#groupby = data.groupby('Column').agg(['mean', 'median', 'std'])
 
+		print("The head of the dataset")
 		print(head)
+
+		print("The info of the dataset")
 		print(info)
+
+		print("The tail of the dataset")
+		print(tail)
+
+		print("The descripotion of the dataset")
+		print(describe)
+
+		print("The unique values in the dataset")
+		print(unique)
+
+		print("The null sum in the datset")
+		print(issum)
+		#print(groupby)
+
+	def visualization(self,data):
+		"""
+		The function to visualize the data set 
+		Args:
+			data : the pandas dataframe 
+		"""
+
+		#the data visulaization
+
+		pass
 
 
 
