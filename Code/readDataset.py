@@ -6,7 +6,7 @@ to visualize the dataset and understand
 #imports 
 import pandas as pd 
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 
@@ -64,13 +64,13 @@ class Datahandler:
 		"""
 
 		#the data visulaization
-
 		pass
-
 
 
 
 if __name__== "__main__":
 	handler = Datahandler()
-	res = handler.printInfo(df)
-	print(res)
+	information = handler.printInfo(df)
+	visuals = handler.visualization(df)
+	print(information)
+	print(visuals)
